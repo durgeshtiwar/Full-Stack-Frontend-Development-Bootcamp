@@ -1,0 +1,28 @@
+#button_1st
+{
+    height: 30px;
+    width: 70px;
+    background-color: rgb(129, 208, 129);
+    border-radius: 4rem;
+    border:hidden;
+}
+#button_1st:hover {
+    background-color:white;
+    cursor: pointer;
+}
+#button_2nd
+{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(129, 208, 129);
+    border-radius: 4rem;
+    border:hidden;
+    font-weight: bold;
+}
+.button_3rd
+{
+    height: 30px;
+    width: 170px;
+    border-radius: 4rem;
+    font-weight: bold;
+}

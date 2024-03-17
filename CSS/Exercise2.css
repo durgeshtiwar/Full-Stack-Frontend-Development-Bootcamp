@@ -1,0 +1,18 @@
+.container{
+    border: 2px solid rgb(24, 3, 3);
+    border-radius: 0.3rem;
+    width: 200px;
+}
+.button{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+.input_container{
+    margin: 1rem;
+}
+.button_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+}

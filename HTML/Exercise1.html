@@ -7,14 +7,13 @@
     <title>Exercise 1</title>
 </head>
 <body>
-    <button id="button_1st">click</button><br><br>
-    <button id="button_2nd" onclick="alert('Add to bag')">Add to Bag</button>
-    <button class="button_3rd" onclick="alert('❤️ WISHLIST ')">❤️ WISHLIST</button><br>
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, beatae.
-        Delectus tenetur consequuntur nulla quasi sed? Natus,
-        ipsa! Autem quae velit necessitatibus excepturi illum voluptas neque et dolore doloremque praesentium.
-    </p>
+    <button id="button_1st" onclick="salesItem++;
+    document.querySelector('#para').innerText = `Your Bag Has ${salesItem} Items`">Add to Bag</button>
+    <button id="button_2nd" onclick="salesItem--;
+    document.querySelector('#para').innerText = `Your Bag Has ${salesItem} Items`">Move To WISHLIST</button>
+    <button id="button_3rd" onclick="salesItem=salesItem+2;
+    document.querySelector('#para').innerText = `Your Bag Has ${salesItem} Items`">Add 1+1 Sales Item</button>
+    <h1 id="para"></h1>
     <script src="/JAVASCRIPT/Exercise.js"></script>
 </body>
 </html>

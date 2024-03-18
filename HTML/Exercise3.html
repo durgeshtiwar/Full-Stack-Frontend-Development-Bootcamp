@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="/CSS/Exercise3.css">
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <button onclick="
+    console.log('Your Choice is Bat');
+    randomNumber = (Math.random()*3);
+    if(randomNumber > 0 &&  randomNumber <= 1) 
+    {
+        computerChoice = 'Bat';
+        // console.log('Computer Choice is Bat');
+    }else if (randomNumber > 1 &&  randomNumber <= 2 ) {
+        computerChoice = 'Ball';
+        // console.log('Computer Choice is Ball');
+    }
+    else{
+        computerChoice = 'Stump';
+        // console.log('Computer Choice is stump');
+    }
+    console.log(`Computer Choice is ${computerChoice}`);
+    if (computerChoice === 'Bat') {
+        resultMessage = `It's is Tie`;
+    } else if (computerChoice === 'Ball') {
+        resultMessage = `User Win`;
+    }else if (computerChoice === 'Stump') {
+        resultMessage = `Computer Win`;
+    }
+    alert(`Your Choice is Bat,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
+
+    ">Bat</button>
+    <button onclick="
+    console.log('Your Choice is Ball');
+    randomNumber = (Math.random()*3);
+    if(randomNumber > 0 &&  randomNumber <= 1) 
+    {
+        computerChoice = 'Bat';
+        // console.log('Computer Choice is Bat');
+    }else if (randomNumber > 1 &&  randomNumber <= 2 ) {
+        computerChoice = 'Ball';
+        // console.log('Computer Choice is Ball');
+    }
+    else{
+        computerChoice = 'Stump';
+        // console.log('Computer Choice is stump');
+    }
+    console.log(`Computer Choice is ${computerChoice}`);
+    if (computerChoice === 'Bat') {
+        resultMessage = `Computer Win`;
+    } else if (computerChoice === 'Ball') {
+        resultMessage = `It's is Tie`;
+    }else if (computerChoice === 'Stump') {
+        resultMessage = `User Win`;
+    }
+    alert(`Your Choice is Ball,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
+
+    ">Ball</button>
+    <button onclick="
+    console.log('Your Choice is Stump');
+    randomNumber = (Math.random()*3);
+    if(randomNumber > 0 &&  randomNumber <= 1) 
+    {
+        computerChoice = 'Bat';
+        // console.log('Computer Choice is Bat');
+    }else if (randomNumber > 1 &&  randomNumber <= 2 ) {
+        computerChoice = 'Ball';
+        // console.log('Computer Choice is Ball');
+    }
+    else{
+        computerChoice = 'Stump';
+        // console.log('Computer Choice is stump');
+    }
+    console.log(`Computer Choice is ${computerChoice}`);
+    if (computerChoice === 'Bat') {
+        resultMessage = `User Win`;
+    } else if (computerChoice === 'Ball') {
+        resultMessage = `Computer Win`;
+    }else if (computerChoice === 'Stump') {
+        resultMessage = `It's is Tie`;
+    }
+    alert(`Your Choice is Stump,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
+
+    ">Stump</button>
+    <script src="/JAVASCRIPT/Exercise3.js"></script>
+</body>
+</html>

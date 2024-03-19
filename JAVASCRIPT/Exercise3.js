@@ -18,3 +18,32 @@ function genrateRandomNumber()
     }
     console.log(`Computer Choice is ${computerChoice}`);
 }
+function checkWinner(userInput, computerChoice)
+{
+    if (userInput === 'Bat') {
+        if (computerChoice === 'Bat') {
+            return `It's is Tie`;
+        } else if (computerChoice === 'Ball') {
+            return `User Win`;
+        }else if (computerChoice === 'Stump') {
+            return `Computer Win`;
+        }
+    } else if (userInput ==='Ball') {
+        if (computerChoice === 'Bat') {
+            return `Computer Win`;
+        } else if (computerChoice === 'Ball') {
+            return `It's is Tie`;
+        }else if (computerChoice === 'Stump') {
+            return `User Win`;
+        }
+    } else
+    {
+        if (computerChoice === 'Bat') {
+            return `User Win`;
+        } else if (computerChoice === 'Ball') {
+            return `Computer Win`;
+        }else if (computerChoice === 'Stump') {
+            return `It's is Tie`;
+        }
+    }
+}

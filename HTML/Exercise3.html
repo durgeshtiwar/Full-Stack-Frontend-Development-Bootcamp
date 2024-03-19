@@ -7,43 +7,20 @@
 <body>
     <h1>Bat Ball Stump Game</h1>
     <button onclick="
-    console.log('Your Choice is Bat');
     genrateRandomNumber();
-    if (computerChoice === 'Bat') {
-        resultMessage = `It's is Tie`;
-    } else if (computerChoice === 'Ball') {
-        resultMessage = `User Win`;
-    }else if (computerChoice === 'Stump') {
-        resultMessage = `Computer Win`;
-    }
+    resultMessage = checkWinner('Bat',computerChoice)
     alert(`Your Choice is Bat,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
 
     ">Bat</button>
     <button onclick="
-    console.log('Your Choice is Ball');
     genrateRandomNumber();
-    console.log(`Computer Choice is ${computerChoice}`);
-    if (computerChoice === 'Bat') {
-        resultMessage = `Computer Win`;
-    } else if (computerChoice === 'Ball') {
-        resultMessage = `It's is Tie`;
-    }else if (computerChoice === 'Stump') {
-        resultMessage = `User Win`;
-    }
+    resultMessage = checkWinner('Ball',computerChoice)
     alert(`Your Choice is Ball,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
 
     ">Ball</button>
     <button onclick="
-    console.log('Your Choice is Stump');
     genrateRandomNumber();
-    console.log(`Computer Choice is ${computerChoice}`);
-    if (computerChoice === 'Bat') {
-        resultMessage = `User Win`;
-    } else if (computerChoice === 'Ball') {
-        resultMessage = `Computer Win`;
-    }else if (computerChoice === 'Stump') {
-        resultMessage = `It's is Tie`;
-    }
+    resultMessage = checkWinner('Stump',computerChoice)  
     alert(`Your Choice is Stump,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
 
     ">Stump</button>

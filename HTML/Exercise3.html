@@ -8,20 +8,7 @@
     <h1>Bat Ball Stump Game</h1>
     <button onclick="
     console.log('Your Choice is Bat');
-    randomNumber = (Math.random()*3);
-    if(randomNumber > 0 &&  randomNumber <= 1) 
-    {
-        computerChoice = 'Bat';
-        // console.log('Computer Choice is Bat');
-    }else if (randomNumber > 1 &&  randomNumber <= 2 ) {
-        computerChoice = 'Ball';
-        // console.log('Computer Choice is Ball');
-    }
-    else{
-        computerChoice = 'Stump';
-        // console.log('Computer Choice is stump');
-    }
-    console.log(`Computer Choice is ${computerChoice}`);
+    genrateRandomNumber();
     if (computerChoice === 'Bat') {
         resultMessage = `It's is Tie`;
     } else if (computerChoice === 'Ball') {
@@ -34,19 +21,7 @@
     ">Bat</button>
     <button onclick="
     console.log('Your Choice is Ball');
-    randomNumber = (Math.random()*3);
-    if(randomNumber > 0 &&  randomNumber <= 1) 
-    {
-        computerChoice = 'Bat';
-        // console.log('Computer Choice is Bat');
-    }else if (randomNumber > 1 &&  randomNumber <= 2 ) {
-        computerChoice = 'Ball';
-        // console.log('Computer Choice is Ball');
-    }
-    else{
-        computerChoice = 'Stump';
-        // console.log('Computer Choice is stump');
-    }
+    genrateRandomNumber();
     console.log(`Computer Choice is ${computerChoice}`);
     if (computerChoice === 'Bat') {
         resultMessage = `Computer Win`;
@@ -60,19 +35,7 @@
     ">Ball</button>
     <button onclick="
     console.log('Your Choice is Stump');
-    randomNumber = (Math.random()*3);
-    if(randomNumber > 0 &&  randomNumber <= 1) 
-    {
-        computerChoice = 'Bat';
-        // console.log('Computer Choice is Bat');
-    }else if (randomNumber > 1 &&  randomNumber <= 2 ) {
-        computerChoice = 'Ball';
-        // console.log('Computer Choice is Ball');
-    }
-    else{
-        computerChoice = 'Stump';
-        // console.log('Computer Choice is stump');
-    }
+    genrateRandomNumber();
     console.log(`Computer Choice is ${computerChoice}`);
     if (computerChoice === 'Bat') {
         resultMessage = `User Win`;

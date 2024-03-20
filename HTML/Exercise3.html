@@ -9,20 +9,17 @@
     <button onclick="
     genrateRandomNumber();
     resultMessage = checkWinner('Bat',computerChoice)
-    alert(`Your Choice is Bat,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
-
+    displayResult('Bat',computerChoice,resultMessage);
     ">Bat</button>
     <button onclick="
     genrateRandomNumber();
     resultMessage = checkWinner('Ball',computerChoice)
-    alert(`Your Choice is Ball,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
-
+    displayResult('Ball',computerChoice,resultMessage);
     ">Ball</button>
     <button onclick="
     genrateRandomNumber();
     resultMessage = checkWinner('Stump',computerChoice)  
-    alert(`Your Choice is Stump,Computer Choice is ${computerChoice} and  the Result is ${resultMessage}`);
-
+    displayResult('Stump',computerChoice,resultMessage);
     ">Stump</button>
     <script src="/JAVASCRIPT/Exercise3.js"></script>
 </body>

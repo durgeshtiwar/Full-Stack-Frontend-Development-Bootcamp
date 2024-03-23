@@ -1,11 +1,12 @@
 let computerChoice = '';
 let randomNumber;
 let resultMessage = '';
-let  score = {
-    Win : 0,
-    Lose : 0,
+let storage = localStorage.getItem('Score');
+let score = JSON.parse(storage) || {
+    Win :0,
+    Lose: 0,
     Tie : 0,
-};
+}
 function genrateRandomNumber()
 {
     randomNumber = (Math.random()*3);
@@ -61,10 +62,14 @@ function checkWinner(userInput, computerChoice)
         }
     }
 }
+
 function displayResult(yourChoice,computerChoice,resultMessage)
 {
+    localStorage.setItem("Score",JSON.stringify(score));
+   
     alert(`Your Choice is : ${yourChoice}
 Computer Choice is : ${computerChoice}
 The Result is : ${resultMessage}
 Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}`);
+
 }

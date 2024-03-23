@@ -22,7 +22,6 @@ function genrateRandomNumber()
         computerChoice = 'Stump';
         // console.log('Computer Choice is stump');
     }
-    console.log(`Computer Choice is ${computerChoice}`);
 }
 function checkWinner(userInput, computerChoice)
 {
@@ -66,22 +65,22 @@ function checkWinner(userInput, computerChoice)
 function displayResult(yourChoice,computerChoice,resultMessage)
 {
     localStorage.setItem("Score",JSON.stringify(score));
-   
-    alert(`Your Choice is : ${yourChoice}
-Computer Choice is : ${computerChoice}
-The Result is : ${resultMessage}
-Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}`);
-
+    document.querySelector('.user_move').innerText = `Your Choice is : ${yourChoice}`;
+    document.querySelector('.comp_move').innerText = `Computer Choice is : ${computerChoice}`;
+    document.querySelector('.result').innerText = `The Result is : ${resultMessage}`;
+    document.querySelector('.score').innerText = `Score : {Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}}`;
 }
 function resetGame()
 {
-    console.log("reset game");
+
     localStorage.clear();
     score = {
         Win :0,
         Lose: 0,
         Tie : 0,
     }
-    alert(`Resest
-Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}`);
+    document.querySelector('.user_move').innerText = '';
+    document.querySelector('.comp_move').innerText = '';
+    document.querySelector('.result').innerText = 'Game Reset';
+    document.querySelector('.score').innerText = `Score : {Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}}`;
 }

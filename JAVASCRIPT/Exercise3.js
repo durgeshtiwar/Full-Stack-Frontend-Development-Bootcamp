@@ -73,3 +73,15 @@ The Result is : ${resultMessage}
 Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}`);
 
 }
+function resetGame()
+{
+    console.log("reset game");
+    localStorage.clear();
+    score = {
+        Win :0,
+        Lose: 0,
+        Tie : 0,
+    }
+    alert(`Resest
+Win:${score.Win}, Lose:${score.Lose}, Tie:${score.Tie}`);
+}

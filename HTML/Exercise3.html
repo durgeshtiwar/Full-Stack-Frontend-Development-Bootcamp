@@ -6,21 +6,21 @@
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
-    <button onclick="
+    <button class="button_choice" onclick="
     genrateRandomNumber();
     resultMessage = checkWinner('Bat',computerChoice)
     displayResult('Bat',computerChoice,resultMessage);
-    ">Bat</button>
-    <button onclick="
+    "><img src="/HTML/Images/bat.png" alt="Bat" class="image_choice"></button>
+    <button class="button_choice" onclick="
     genrateRandomNumber();
     resultMessage = checkWinner('Ball',computerChoice)
     displayResult('Ball',computerChoice,resultMessage);
-    ">Ball</button>
-    <button onclick="
+    "><img src="/HTML/Images/ball.png" alt="Ball" class="image_choice"></button>
+    <button class="button_choice" onclick="
     genrateRandomNumber();
     resultMessage = checkWinner('Stump',computerChoice)  
     displayResult('Stump',computerChoice,resultMessage);
-    ">Stump</button><br><br>
+    "><img src="/HTML/Images/stump.png" alt="stump" class="image_choice"></button><br><br>
     <button onclick="
     resetGame();
     ">Reset Game</button>

@@ -1,3 +1,18 @@
 body{
     text-align: center;
 }
+.button_choice
+{
+    height: 150px;
+    width: 150px;
+    border: hidden;
+    background-color: rgb(166, 217, 166);
+    border-radius: 50%;
+    margin: 1rem;
+}
+.image_choice
+{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}

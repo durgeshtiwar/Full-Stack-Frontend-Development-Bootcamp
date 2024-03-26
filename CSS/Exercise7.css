@@ -1,17 +1,48 @@
-/* body
-{
-    text-align: center;
-}
-.heading
-{
-    text-align: center;
-} */
 .todo-Input
 {
     font-size: x-large;
 }
+
 .container
 {
     display: grid;
     grid-template-columns: 200px 150px 100px;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    row-gap: 1rem;
+}
+.whole-container
+{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 1rem;
+}
+.btn-delete
+{
+    height: 35px;
+    width: 100px;
+    background-color:#840202;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.Add-btn
+{
+    height: 35px;
+    width: 100px;
+    background-color:#086a3c;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.todo-Input
+{
+    font-size: 20px;
+}
+.date-Input
+{
+    font-size: 20px;
 }

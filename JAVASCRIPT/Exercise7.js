@@ -1,4 +1,4 @@
-let arrlist1 = [{Item : 'vbcc',dueDate : '05/06/2033'}];
+let arrlist1 = [{Item : 'Go To studey',dueDate : '20/03/2024'}];
 displayTodo();
 function addTodo()
 {
@@ -13,6 +13,8 @@ function addTodo()
 }
 function displayTodo()
 {
+    const storage = JSON.stringify(arrlist1);
+    localStorage.setItem("task",storage);
     let containerElement = document.querySelector('.container');
     let newHTML = '';
     for (let index = 0; index < arrlist1.length; index++) {

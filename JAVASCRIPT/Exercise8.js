@@ -17,7 +17,15 @@
 //     button.style.width = '100px';
 // })};
 
-let arr1 = [1,5,7,8,9,6,4,3,5];
-arr1.forEach(element => {
-    console.log(element);
-});
+// let arr1 = [1,5,7,8,9,6,4,3,5];
+// let sums = 0;
+// arr1.forEach(element => {
+//     sums += element;
+// });
+// console.log(sums);
+
+// let arr1 = [1,5,7,8,9,6,4,3,5];
+// arr1.map((num)=>{
+//     num = num*num;
+//     console.log(num);
+// })

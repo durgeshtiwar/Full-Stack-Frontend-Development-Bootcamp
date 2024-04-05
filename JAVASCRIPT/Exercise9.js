@@ -134,3 +134,80 @@
 
 //15. Calculate the slope, x-intercept and y-intercept of y = 2x -2
 //console.log("Slop is 2");
+
+//16. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+// let radius = prompt("Enter Radius: ");
+// console.log(`Area of circle is ${Math.PI*radius**2} and circumference of a circle is ${Math.PI*2*radius}`);
+
+// 17. Create a human readable time format using the Date time object
+//     - YYYY-MM-DD HH:mm
+//     - DD-MM-YYYY HH:mm
+//     - DD/MM/YYYY HH:mm
+// let date = new Date();
+// let year = date.getFullYear()+ "";
+// let month = (date.getMonth()+1)+ "";
+// let day = date.getDate() + "";
+// let hour = date.getHours() + "";
+// let min = date.getMinutes() + "";
+
+// year = checkZero(year);    
+// month = checkZero(month);   
+// day = checkZero(day);
+// hour = checkZero(hour); 
+// min = checkZero(min);   
+// function checkZero(item)
+// {
+//     if (item.length == 1) s
+//     {
+//         item = '0'+item;
+        
+//     }
+//     return item;
+// }
+// console.log(year + "-" + month + "-" + day + " " + hour + ":" + min);
+// console.log(day + "-" + month + "-" + year + " " + hour + ":" + min);
+// console.log(day + "/" + month + "/" + year + " " + hour + ":" + min);
+
+//18. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:'You are old enough to drive' but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.
+// let age = prompt("Please enter your Age?");
+// if (age == 18 || age>18) {
+//     console.log(`feedback:'You are old enough to drive'`);
+// } else {
+//     console.log(`feedback:'stating to wait for the number of years he needs to turn 18'`);
+// }
+
+//19. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
+// const num1 = prompt("Enter the no.");
+// if (num1%2 == 0) {
+//     console.log(num1+" is an even number.");
+// } else {
+//     console.log(num1+" is an odd number.");
+// }
+
+// 20. Write a code which can give grades to students according to theirs scores:
+//     - 80-100, A
+//     - 70-89, B
+//     - 60-69, C
+//     - 50-59, D
+//     - 0-49, F
+// let score=prompt('please enter student\'s score');
+// switch (true) {
+//     case score>80 && 100>score:
+//         console.log("Stuent pass with A Grades");
+//         break;
+//     case score>70 && 89>score:
+//         console.log("Stuent pass with B Grades");
+//         break;
+//     case score>60 && 69>score:
+//         console.log("Stuent pass with C Grades");
+//         break;
+//     case score>50 && 59>score:
+//         console.log("Stuent pass with D Grades");
+//         break;
+//     case score>0 && 49>score:
+//         console.log("Stuent Fail");
+//         break;
+//     default:
+//         console.log("Con't Exist");
+//         break;
+// }

@@ -210,4 +210,94 @@
 //     default:
 //         console.log("Con't Exist");
 //         break;
+//               }
+
+// 21. Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+//     - September, October or November, the season is Autumn.
+//     - December, January or February, the season is Winter.
+//     - March, April or May, the season is Spring
+//     - June, July or August, the season is Summer
+// let month = prompt("Please Enter The Month");
+// switch (month) {
+//     case "September" || "October" || "November":
+//         console.log("The Season Is Autumn");
+//         break;
+//     case "December" || "January" || "February":
+//         console.log("The Season Is Winter");
+//         break;
+//     case "March" || "April" || "May":
+//         console.log("The Season Is Spring");
+//         break;
+//     case "June" || "July" || "August":
+//         console.log("The Season Is Autumn");
+//         break;
+//     default:
+//         console.log("Invalid Month");
+//         break;
+// }
+
+//22. Write a program which tells the number of days in a month.
+// let month = prompt("Please Enter The Month");
+// switch (month) {
+//     case "September" || "October"|| "April" || "June" || "November":
+//         console.log("Number of Days in this month is 30");
+//         break;
+//     case "February":
+//         console.log("Number of Days in this month is 28 or 29");
+//         break;
+//     case "January" || "February" ||"March" || "May" || "July" || "August":
+//         console.log("Number of Days in this month is 30");
+//         break;
+//     default:
+//         console.log("Invalid Month");
+//         break;
+// }
+
+//23. Write a program which tells the number of days in a month, now consider leap year.
+// let month = prompt("Please Enter The Month");
+// switch (month) {
+//     case "September" || "October"|| "April" || "June" || "November":
+//         console.log("Number of Days in this month is 30");
+//         break;
+//     case "February":
+//         console.log("Number of Days in this month is 29 due to Leap Year");
+//         break;
+//     case "January" || "February" ||"March" || "May" || "July" || "August":
+//         console.log("Number of Days in this month is 30");
+//         break;
+//     default:
+//         console.log("Invalid Month");
+//         break;
+// }
+
+//24. Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
+// console.log(country_list);
+// console.log(country_list2);
+// console.log(webTechs);
+
+// 25. In the following shopping cart add, remove, edit items
+//     => const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+//     - add 'Meat' in the beginning of your shopping cart if it has not been already added
+//     - add Sugar at the end of you shopping cart if it has not been already added
+//     - remove 'Honey' if you are allergic to honey
+//     - modify Tea to 'Green Tea'
+// const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+// let myAllergicItem = 'honey';
+// if (!shoppingCart.includes('Meat')) {
+//     shoppingCart.unshift('Meat');
+// }
+// if (!shoppingCart.includes('Sugar')) {
+//     shoppingCart.push('Sugar');
+// }
+// if (!shoppingCart.includes(myAllergicItem)){
+//         shoppingCart.splice(shoppingCart.indexOf('Honey'),  1);
+// }
+// if (shoppingCart.includes('Tea')){
+//     shoppingCart[shoppingCart.indexOf('Tea')]='Green Tea';
+// }
+// console.log(shoppingCart);
+
+//26. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+// if (country_list.includes('Ethiopia')) {
+//     console.log(country_list[country_list.indexOf('Ethiopia')].toUpperCase());
 // }

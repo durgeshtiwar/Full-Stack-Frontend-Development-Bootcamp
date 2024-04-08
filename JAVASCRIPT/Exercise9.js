@@ -322,3 +322,37 @@
 // console.log(`Range of Ages: ${range}`);
 
 //28. Use for loop to iterate from 0 to 100 and print only prime numbers
+// const arr1 = [2];
+// for (let i = 3; i < 100; i++) {
+//     let count = 0;
+//     for (let j = 2; j <= i/2; j++) {
+//         if (i%j === 0) {
+//             count = count+1;
+//             break;
+//         }
+//     }
+//     if (count === 0) {
+//         arr1.push(i);
+//     }
+// }
+// console.log(arr1);
+
+//29. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+// const arrEvens = [];
+// const arrOdds = [];
+// for (let i = 0; i <= 100; i++){
+//     if (i % 2 ==  0){
+//         arrEvens.push(i);
+//     } else{
+//         arrOdds.push(i);
+//     }
+// }
+// console.log("Sum of even numbers is " + arrEvens.reduce((a,b)=> a + b));
+// console.log("Sum of odd numbers is " + arrOdds.reduce((c,d)=> c + d)) ;
+
+//30. Write a script which generates a random hexadecimal number.
+// function getRandomHexNumber() {
+//     return Math.floor(Math.random() * 16).toString(16);
+// }
+// const hexColor = () => `${"#" + Array.from({length: 6}).map(getRandomHexNumber).join('')}`;
+// console.log(hexColor());

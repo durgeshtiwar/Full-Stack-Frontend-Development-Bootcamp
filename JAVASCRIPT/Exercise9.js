@@ -301,3 +301,24 @@
 // if (country_list.includes('Ethiopia')) {
 //     console.log(country_list[country_list.indexOf('Ethiopia')].toUpperCase());
 // }
+
+// 27. The following is an array of 10 students ages:
+//     => const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+//     - Sort the array and find the min and max age
+//     - Find the median age(one middle item or two middle items divided by two)
+//     - Find the average age(all items divided by number of items)
+//     - Find the range of the ages(max minus min)
+//     - Compare the value of (min - average) and (max - average), use abs() method
+// const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+// let sortAge = ages.sort();
+// let min = Math.min(...ages);
+// let max = Math.max(...ages);
+// let average =  ages.reduce((total, next) => total + next) / ages.length;
+// let range = max - min;
+// console.log(`Soredt  Ages : ${sortAge}`);
+// console.log(`Minimum Age: ${min}`);
+// console.log(`Maximum Age: ${max}`);
+// console.log(`Average Age: ${average}`);
+// console.log(`Range of Ages: ${range}`);
+
+//28. Use for loop to iterate from 0 to 100 and print only prime numbers

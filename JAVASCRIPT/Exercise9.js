@@ -356,3 +356,4 @@
 // }
 // const hexColor = () => `${"#" + Array.from({length: 6}).map(getRandomHexNumber).join('')}`;
 // console.log(hexColor());
+

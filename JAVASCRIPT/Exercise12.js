@@ -61,26 +61,26 @@
 // });
 
 
-const promiseFive = new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("This is the final async  Task");
-            let error = true;
-        if (!error) {
-            resolve({name:"Chai",mail: "chaiexample@gmail.com"});
-        }
-        else {
-            reject("Erorr Occured in the final Async Task");
-        }
-        },1000)
-    });
-async function consumedPromiseFive()
-{
-    try {
-        const response = await promiseFive;
-        console.log(response);
-        console.log(`User Name : ${response.name}, User Email : ${response.mail}`);
-    } catch (error) {
-        console.log(error);
-    }
-}
-consumedPromiseFive();
+// const promiseFive = new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("This is the final async  Task");
+//             let error = true;
+//         if (!error) {
+//             resolve({name:"Chai",mail: "chaiexample@gmail.com"});
+//         }
+//         else {
+//             reject("Erorr Occured in the final Async Task");
+//         }
+//         },1000)
+//     });
+// async function consumedPromiseFive()
+// {
+//     try {
+//         const response = await promiseFive;
+//         console.log(response);
+//         console.log(`User Name : ${response.name}, User Email : ${response.mail}`);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// consumedPromiseFive();

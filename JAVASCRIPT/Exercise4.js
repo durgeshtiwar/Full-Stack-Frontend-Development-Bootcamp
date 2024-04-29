@@ -36,11 +36,3 @@
 //     }
 // }
 // isIdenticalProduct();
-
-
-
-let e = document.querySelector('.bc');
-console.log(e);
-e.addEventListener('mouseover' ,function(){
-    e.style.backgroundColor="red";
-});

@@ -84,3 +84,26 @@
 //     }
 // }
 // consumedPromiseFive();
+
+
+//Use Async Await  with Promises
+// async function getData(dataId)
+// {
+//     return new Promise(( resolve,reject)=>
+//     {
+//         setTimeout(() =>
+//         {
+//             console.log("Async Function Called and Id is ", dataId);
+//             resolve();
+//         },2000);
+//     });
+// }
+// (async function processData()
+// {
+//     await getData(1);
+//     console.log("Data Processing Started");
+//     await getData(2);
+//     await getData(3);
+//     await getData(4);
+//     await getData(5);
+// })();

@@ -6,8 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
-  return (
-    <center className="todo_container">
+  return <center className="todo_container">
       <AppName/>
       <AddTodo/>
       <div className="Todo_Item">
@@ -15,7 +14,7 @@ function App() {
       <TodoItem2/>
       </div>
     </center>
-  )
+    
 }
 
 export default App

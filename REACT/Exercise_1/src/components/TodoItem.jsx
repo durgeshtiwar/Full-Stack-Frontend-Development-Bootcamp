@@ -1,10 +1,10 @@
 import TodoItems from "./TodoItems";
 
-const TodoItem = (todoItems)=>{
+const TodoItem = ({todoItems})=>{
   return(
     <>
-      <div>
-      <TodoItems todoName = 'Buy Milk' todoDate='25/11/2024'></TodoItems>
+      <div className="items-Container">
+        {todoItems.map(items=><TodoItems key={items.todoName} todoName = {items.todoName} todoDate={items.todoDate}></TodoItems>)}      
       </div>
     </> 
   );

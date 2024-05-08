@@ -14,6 +14,10 @@ function App() {
       todoName : 'Go To College',
       todoDate : '25/11/2024',
     },
+    {
+      todoName : 'Use This Project',
+      todoDate : '03/11/2024',
+    }
   ];
 
   return <center className="todo_container">

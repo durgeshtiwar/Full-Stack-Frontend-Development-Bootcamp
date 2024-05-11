@@ -1,10 +1,5 @@
 import style from "./Fooditems.module.css";
-const foodItems = ({items})=>{
-const buttonWasClicked = (item,event)=>{
-  console.log(event);
-  console.log(`${item} being Clicked`);
-};
-
+const foodItems = ({items,buttonWasClicked})=>{
 
   return(
     <>
@@ -12,7 +7,7 @@ const buttonWasClicked = (item,event)=>{
     {items.map(item =>(
     <li key={item} className="list-group-item">{item}
     <button className={`${style.button} btn btn-info`}
-    onClick={(event)=>buttonWasClicked(item,event)}
+    onClick={buttonWasClicked}
     >Buy Now</button>
     </li>))}
     </ul>

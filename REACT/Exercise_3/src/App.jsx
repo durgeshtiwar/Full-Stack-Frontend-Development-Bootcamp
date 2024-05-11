@@ -3,27 +3,26 @@ import Container from "./compoenets/Container";
 import FoodInput from "./compoenets/FoodInput";
 import Fooditems from "./compoenets/Fooditems";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ErrorMessage from "./compoenets/ErrorMessage";
 function App() {
-  let healthItems = ["Roti","Dal","Hari Sbjiya","Ghee"];
-  let [textToShow,setTextToShow] = useState();
-  const changeOnInput = () => {
-    console.log(event.target.value);
-    setTextToShow(event.target.value);
+  
+  let [healthItems,sethealthyItems] = useState([]);
+  const changeOnInput = (event) => {
+    if (event.key === 'Enter') {
+      // let newFooditem = event.target.value;
+      let newhealthItems = [...healthItems,(event.target.value)];
+      event.target.value = '';
+      sethealthyItems(newhealthItems);
+    }
   }
-  const buttonWasClicked = ()=>{
-    console.log("Button Clicked");
-  };
+  
   return (
     <>
     <Container>
-    <h1>Fragments, Randring using map, Passing Data Throw Props</h1>
+    <h1>Healthy Food</h1>
     <FoodInput changeOnInput={changeOnInput}/>
-    <p>{textToShow}</p>
-    <Fooditems items={healthItems} buttonWasClicked={buttonWasClicked}
-    > </Fooditems>
-    </Container>
-    <Container>
-      <p>Above is list of Healthy Food which is good for your health and Well being.</p>
+    <Fooditems items={healthItems}> </Fooditems>
+    <ErrorMessage items={healthItems}></ErrorMessage>
     </Container>
     </>
   )

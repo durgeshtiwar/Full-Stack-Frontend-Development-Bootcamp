@@ -3,6 +3,7 @@ import AddTodo from './components/AddTodo';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import TodoItem from './components/TodoItem';
+import { useState } from 'react';
 
 function App() {
   const todoItems = [
@@ -20,10 +21,15 @@ function App() {
     }
   ];
 
+  let [valTodo,setvalTodo] = useState(todoItems);
+  const addTodo=(todoName,dueDate)=>
+    {
+      console.log(`${todoName} and ${dueDate}`)
+    }
   return <center className="todo_container">
       <AppName/>
-      <AddTodo/>
-      <TodoItem todoItems={todoItems}></TodoItem>
+      <AddTodo addTodo={addTodo} />
+      <TodoItem todoItems={valTodo}></TodoItem>
     </center>
     
 }

@@ -13,7 +13,7 @@ function AddTodo()
     <button type="button" class="btn btn-success">Add Todo</button>
     </div>
   </div>
-</div>
+  </div>
   </>
 }
 export default AddTodo;

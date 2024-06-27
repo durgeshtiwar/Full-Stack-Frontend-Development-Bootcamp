@@ -6,7 +6,7 @@ import TodoItem1 from "./components/TodoItem1";
 import TodoItem2 from "./components/TodoItem2";
 function App() {
   return (
-    <center>
+    <center className="todo-container">
      <AppName/>
      <AddTodo/>
      <TodoItem1/>

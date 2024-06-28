@@ -1,6 +1,6 @@
 function AppName()
 {
-  return <div class="todo_container">
+  return <div>
     <h1>TODO APP</h1>
   </div>
 }

@@ -1,12 +1,17 @@
 import { useState } from 'react'
+import UserContextProvider from './context/UserContextProvider'
+import Login from './components/Login'
+import Profile from './components/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <center>
+    <UserContextProvider>
     <h1>Chai Aur Code With Context API</h1>
-    </center>
+    <Login/>
+    <Profile/>
+    </UserContextProvider>
   )
 }
 

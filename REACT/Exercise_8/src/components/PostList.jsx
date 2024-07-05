@@ -3,11 +3,11 @@ import Post from './Post';
 import {PostList as PostListData} from '../store/post-list-store';
 
 function PostList() {
-  const {postlist} = useContext (PostListData);
+  const {postList} = useContext(PostListData);
   return (
     <div>
-      
-      
+      {postList.map((post)=>
+      <Post key={post.id} post={post}/>)}
     </div>
   )
 }

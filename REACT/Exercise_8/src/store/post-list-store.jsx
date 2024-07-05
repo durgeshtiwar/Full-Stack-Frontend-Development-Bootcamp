@@ -16,7 +16,7 @@ const PostListProvider = ({children})=>{
   const addPost = ()=>{};
   const deletePost = ()=>{};
   return (<PostList.Provider value={{postList , addPost ,deletePost}}>
-    {children}</PostList.Provider>)
+    {children}</PostList.Provider>);
 };
 
 const DEFAULT_POST_LIST = [

@@ -7,7 +7,6 @@ function PostList() {
       <Post/>
       <Post/>
       <Post/>
-      <Post/>
     </div>
   )
 }

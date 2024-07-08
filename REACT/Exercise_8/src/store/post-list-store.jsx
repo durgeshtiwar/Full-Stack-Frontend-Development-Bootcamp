@@ -18,7 +18,10 @@ const postListReducer = (currentPostList,action) =>{
 
 const PostListProvider = ({children})=>{
   const [postList, dispatchPostList] = useReducer(postListReducer , DEFAULT_POST_LIST);
-  const addPost = ()=>{};
+  const addPost = (userId,postTitle,postContent,reactions,tages)=>
+    {
+      console.log(`${userId},${postTitle},${postContent},${reactions},${tages}`);
+    };
   const deletePost = (postId)=>
     {
       dispatchPostList({

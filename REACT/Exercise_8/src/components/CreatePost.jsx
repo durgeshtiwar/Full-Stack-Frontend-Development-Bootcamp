@@ -18,9 +18,13 @@ function CreatePost() {
     const postTitle = postTitleElement.current.value;
     const postContent = postContentElement.current.value;
     const reactions = reactionsElement.current.value;
-    const tages = tageElement.current.value;
-
+    const tages = tageElement.current.value.split(" ");
     addPost(userId,postTitle,postContent,reactions,tages);
+    userIdElement.current.value = "";
+    postTitleElement.current.value = "";
+    postContentElement.current.value = "";
+    reactionsElement.current.value = "";
+    tageElement.current.value = "";
   };
 
   return (

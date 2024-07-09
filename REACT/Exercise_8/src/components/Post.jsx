@@ -14,11 +14,11 @@ function Post({post}) {
   </span>
     <h5 className="card-title">{post.title}</h5>
     <p className="card-text">{post.body}</p>
-    {post.tages.map((tag)=><span key={tag} className="badge text-bg-primary tage">{tag}</span>)}
+    {post.tags.map((tag)=><span key={tag} className="badge text-bg-primary tage">{tag}</span>)}
     
   </div>
   <div className="alert alert-success reactions" role="alert">
-    This Post has been reacted by {post.reactions} People.
+    This Post has been reacted by {post.reactions.likes} People.
   </div>
 </div>
   )

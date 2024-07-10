@@ -48,7 +48,7 @@ const PostListProvider = ({children})=>{
           posts,
         },
         });
-        console.log(posts[0].reactions.likes);
+        
       };
 
   const deletePost = (postId)=>

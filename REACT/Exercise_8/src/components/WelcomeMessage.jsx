@@ -1,11 +1,10 @@
 import React from 'react'
 
-function WelcomeMessage({onGetPostClick}) {
+function WelcomeMessage() {
   return (
-    <center class="container">
-    <div class="bg-body-tertiary p-5 rounded mt-3">
+    <center className="container">
+    <div className="bg-body-tertiary p-5 rounded mt-3">
     <h1> There are no Posts</h1>
-    <button class="btn btn-lg btn-primary" onClick={onGetPostClick}>View Posts</button>
     </div>
     </center>
   )

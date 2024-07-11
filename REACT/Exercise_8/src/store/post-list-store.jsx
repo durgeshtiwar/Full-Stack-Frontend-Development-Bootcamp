@@ -10,6 +10,7 @@ export const PostList = createContext({
 
 
 const postListReducer = (currentPostList,action) =>{
+  
   let newPostList = currentPostList;
   if (action.type === "DELETE_POST") {
     newPostList = currentPostList.filter((post) => post.id !== action.payload.postId)
@@ -18,24 +19,20 @@ const postListReducer = (currentPostList,action) =>{
     newPostList = action.payload.posts;
     //console.log(newPostList);
   } else if (action.type === "ADD_POST") {
-    newPostList = [action.payload , ...currentPostList];
+    newPostList = [action.payload.post , ...currentPostList];
   }
   return newPostList;
 };
 
 const PostListProvider = ({children})=>{
   const [postList, dispatchPostList] = useReducer(postListReducer , []);
-  const addPost = (userId,postTitle,postContent,reactions,tags)=>
+  const addPost = (post)=>
     {
+
       dispatchPostList({
         type : "ADD_POST",
         payload : {
-          id: Date.now(), 
-          title: postTitle, 
-          body: postContent,
-          reactions: reactions,
-          userId: userId,
-          tags: tags,
+          post,
         },
       });
     };

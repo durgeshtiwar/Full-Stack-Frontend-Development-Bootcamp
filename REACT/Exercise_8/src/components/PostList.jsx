@@ -8,24 +8,17 @@ function PostList() {
   const {postList, addInitialPosts} = useContext(PostListData);
   const [fetchingData, setFetchingData] = useState(false);
 
-  useEffect(()=>{
-    setFetchingData(true);
-    // const controller = new AbortController();
-    // const signal = controller.signal;
-
-    fetch('https://dummyjson.com/posts')
-    .then(res => res.json())
-    .then(obj =>
-    {
-      addInitialPosts(obj.posts);
-      setFetchingData(false);
-    });
-    return () =>
-    {
-      console.log("Cleaning up useEffect");
-      // controller.abort();
-    };
-  },[]);
+  // useEffect(()=>{
+  //   setFetchingData(true);
+  //   fetch('https://dummyjson.com/posts')
+  //   .then(res => res.json())
+  //   .then(obj =>
+  //   {
+  //     addInitialPosts(obj.posts);
+  //     setFetchingData(false);
+  //   });
+    
+  // },[]);
 
 
   return (

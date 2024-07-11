@@ -9,7 +9,8 @@ function CreatePost() {
   const userIdElement = useRef();
   const postTitleElement = useRef();
   const postContentElement = useRef();
-  const reactionsElement = useRef();
+  const likesElement = useRef();
+  const disLikesElement = useRef();
   const tageElement = useRef();
 
   const handleSubmit = (event) =>{
@@ -17,24 +18,29 @@ function CreatePost() {
     const userId = userIdElement.current.value;
     const postTitle = postTitleElement.current.value;
     const postContent = postContentElement.current.value;
-    const reactions = reactionsElement.current.value;
+    const Nlikes = Number(likesElement.current.value);
+    const NdisLikes = Number(disLikesElement.current.value);
     const tags = tageElement.current.value.split(" ");
+    
+    userIdElement.current.value = "";
+    postTitleElement.current.value = "";
+    postContentElement.current.value = "";
+    likesElement.current.value = "";
+    disLikesElement.current.value = "";
+    tageElement.current.value = "";
+    
 
     
 
-    // userIdElement.current.value = "";
-    // postTitleElement.current.value = "";
-    // postContentElement.current.value = "";
-    // reactionsElement.current.value = "";
-    // tageElement.current.value = "";
-    
     fetch('https://dummyjson.com/posts/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
         title: postTitle, 
         body: postContent,
-        reactions: reactions,
+        reactions: {likes : Nlikes,
+          dislikes : NdisLikes,
+        },
         userId: userId,
         tags: tags,
       },)
@@ -61,8 +67,13 @@ function CreatePost() {
     <textarea type="text" ref={postContentElement} className="form-control" id="body" placeholder='Enter Your Post Content here...'/>
   </div>
   <div className="mb-3 ">
-    <label htmlFor="reaction" className="form-label">No. of Rections in Your Post - </label>
-    <input type="text" ref={reactionsElement} className="form-control" id="reaction"/>
+    All Reactions in this Post - <br/>
+    <label htmlFor="likes" className="form-label">No. of Likes - </label><br/>
+    <input type="text" ref={likesElement} className="form-control" id="reaction"/>
+
+    <label htmlFor="dislikes" className="form-label">No. of Dislikes - </label><br/>
+    <input type="text" ref={disLikesElement} className="form-control" id="reaction"/>
+
   </div>
   <div className="mb-3 ">
     <label htmlFor="tage" className="form-label">Enter Your Hashtages - </label>

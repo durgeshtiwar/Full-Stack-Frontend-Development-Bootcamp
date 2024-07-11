@@ -1,25 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import Post from './Post';
 import {PostList as PostListData} from '../store/post-list-store';
 import WelcomeMessage from './WelcomeMessage';
 import LoadingSpinner from './LoadingSpinner';
 
 function PostList() {
-  const {postList, addInitialPosts} = useContext(PostListData);
-  const [fetchingData, setFetchingData] = useState(false);
-
-  // useEffect(()=>{
-  //   setFetchingData(true);
-  //   fetch('https://dummyjson.com/posts')
-  //   .then(res => res.json())
-  //   .then(obj =>
-  //   {
-  //     addInitialPosts(obj.posts);
-  //     setFetchingData(false);
-  //   });
-    
-  // },[]);
-
+  const {postList, fetchingData} = useContext(PostListData);
+  
 
   return (
     <div>

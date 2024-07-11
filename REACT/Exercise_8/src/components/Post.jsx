@@ -18,7 +18,8 @@ function Post({post}) {
     
   </div>
   <div className="alert alert-success reactions" role="alert">
-    This Post has been reacted by {post.reactions.likes} People.
+    This Post has been reacted by {(post.reactions.likes)+(post.reactions.dislikes)} People.<br/>
+    Likes - {post.reactions.likes} , Dislikes - {post.reactions.dislikes}
   </div>
 </div>
   )

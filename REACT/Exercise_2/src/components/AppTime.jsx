@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
+
 function AppTime()
 {
-  let currentTime = new Date();
+  const [time,setTime] = useState(new Date());
+  useEffect(()=>{
+    const intervelId = setInterval(()=>{
+      setTime(new Date());
+    },1000);
+
+    return ()=>{
+      clearInterval(intervelId);
+    }
+
+
+  },[]);
   return <div className="time">
-      <p className="lead">This is The Current Time : {currentTime.toLocaleDateString()} - {currentTime.toLocaleTimeString()}</p>
+      <p className="lead">This is The Current Time : {time.toLocaleDateString()} - {time.toLocaleTimeString()}</p>
     </div>
 };
 export default AppTime;

@@ -41,29 +41,22 @@ export async function createPostAction (data)
 {
   const fromData = await data.request.formData();
   const postData = Object.fromEntries(fromData);
-  postData.reactions = "postData.likes";
-  postData.reactions = "postData.disLikes";
-  console.log("Data mil ki nhi abhi");
-  console.log(postData);
-  console.log(typeof postData);
-  // fetch('https://dummyjson.com/posts/add', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ 
-  //     title: postTitle, 
-  //     body: postContent,
-  //     reactions: {likes : Nlikes,
-  //       dislikes : NdisLikes,
-  //     },
-  //     userId: userId,
-  //     tags: tags,
-  //   },)
-  // })
-  // .then(res => res.json())
-  // .then(post => {
-  //   addPost(post);
-  //   navigate("/");
-  // });
+  postData.tags = postData.tags.split(" ");
+  const likes = postData.likes;
+  const disLikes = postData.disLikes;
+  const reactionObj = {likes,disLikes};
+  postData.reactions = reactionObj;
+  delete postData.likes;
+  delete postData.disLikes;
+  fetch('https://dummyjson.com/posts/add', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(postData)
+  })
+  .then(res => res.json())
+  .then(post => {
+  console.log(post);
+  });
   return redirect("/");
 
 }
